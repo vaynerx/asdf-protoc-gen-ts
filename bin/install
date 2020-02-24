@@ -34,12 +34,11 @@ install () {
     mkdir -p $bin_install_path
     curl -sSL $download_url -o "${tempdir}/archive.tar.gz"
     tar -C "$tempdir" -xzvf "${tempdir}/archive.tar.gz"
-    
-    cd "${tempdir}/ts-protoc-gen-${version}"
+
+    mv "${tempdir}/ts-protoc-gen-${version}/*" "${install_path}"
+    cd "${install_path}"
     npm install
     npm run build
-    mv lib "${install_path}"
-    mv bin "${install_path}"
   )
   
   rm -rf $tempdir
