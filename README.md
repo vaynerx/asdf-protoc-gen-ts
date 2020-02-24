@@ -1,12 +1,12 @@
-![CI](https://github.com/team-gary/asdf-protoc-gen-go/workflows/CI/badge.svg)
+![CI](https://github.com/team-gary/asdf-protoc-gen-ts/workflows/CI/badge.svg)
 
-# asdf-protoc-gen-go
-protoc-gen-go plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
+# asdf-protoc-gen-ts
+protoc-gen-ts plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
 ## Install
 
 ```
-asdf plugin-add protoc-gen-go https://github.com/team-gary/asdf-protoc-gen-go.git
+asdf plugin-add protoc-gen-ts https://github.com/team-gary/asdf-protoc-gen-ts.git
 ```
 
 ## Use
