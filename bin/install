@@ -35,7 +35,7 @@ install () {
     curl -sSL $download_url -o "${tempdir}/archive.tar.gz"
     tar -C "$tempdir" -xzvf "${tempdir}/archive.tar.gz"
 
-    mv "${tempdir}/ts-protoc-gen-${version}/*" "${install_path}"
+    mv ${tempdir}/ts-protoc-gen-${version}/* ${install_path}
     cd "${install_path}"
     npm install
     npm run build
