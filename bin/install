@@ -13,9 +13,9 @@ get_download_url () {
 my_mktemp () {
   local tempdir=""
   if [ "linux" = "$1" ] ; then
-    tempdir=$(mktemp -d asdf-golang.XXXX)
+    tempdir=$(mktemp -d asdf-protoc-gen-ts.XXXX)
   else
-    tempdir=$(mktemp -dt asdf-golang.XXXX)
+    tempdir=$(mktemp -dt asdf-protoc-gen-ts.XXXX)
   fi
   echo -n $tempdir
 }
@@ -33,7 +33,7 @@ install () {
   (
     mkdir -p $bin_install_path
     curl -sSL $download_url -o "${tempdir}/archive.tar.gz"
-    tar -C "$tempdir" -xzvf "${tempdir}"
+    tar -C "$tempdir" -xzvf "${tempdir}/archive.tar.gz"
     
     cd "${tempdir}/ts-protoc-gen-${version}"
     npm install
