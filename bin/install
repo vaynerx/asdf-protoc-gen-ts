@@ -38,6 +38,8 @@ install () {
     cd "${tempdir}/ts-protoc-gen-${version}"
     npm install
     npm run build
+    mv lib "${install_path}"
+    mv bin "${install_path}"
   )
   
   rm -rf $tempdir
